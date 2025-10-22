@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
@@ -8,7 +10,7 @@ func main() {
 
 	//your language
 	fmt.Printf("Cidade: %s | Condição: %s\n", weather.Location.Name, weather.Current.Condition.Text)
-	fmt.Printf("Temperatura: %.1f | Sensação Térmica: %.1f\n", weather.Current.TempC, weather.Current.FeelsLIkeC)
-	fmt.Printf("Umidade: %d%% | Precipitação: %f\n", weather.Current.Humidity, weather.Current.PrecipMM)
+	fmt.Printf("Temperatura: %.1fºC | Sensação Térmica: %.1fºC\n", weather.Current.TempC, weather.Current.FeelsLIkeC)
+	fmt.Printf("Umidade: %d%% | Precipitação: %fmm\n", weather.Current.Humidity, weather.Current.PrecipMM)
 
 }
