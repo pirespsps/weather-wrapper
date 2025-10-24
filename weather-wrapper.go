@@ -14,6 +14,7 @@ type Weather struct {
 	Current struct {
 		Condition struct {
 			Text string `json:"text"`
+			Icon string `json:"icon"`
 		}
 
 		TempC      float64 `json:"temp_c"`
@@ -24,7 +25,7 @@ type Weather struct {
 }
 
 func getWeather(key string, city string) Weather {
-	var url = "http://api.weatherapi.com/v1/current.json?key=" + key + "&q=" + city + "&aqi=no"
+	var url = "http://api.weatherapi.com/v1/current.json?key=" + key + "&q=" + city + "&aqi=no&lang=pt"
 	response, err := http.Get(url)
 
 	if err != nil {
